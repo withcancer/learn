@@ -21,13 +21,13 @@ mov bx,000fh
 mov dx,0000h
 mov cx,10
 push ax
-mov ax, ds
+mov ax,ds
 mov es,ax
 pop ax
 mov bp, StartBootMessage
 int 10h
-xor ah, ah
-xor dl, dl
+xor ah,ah ; ah置为0
+xor dl,dl ; dl置为0
 int 13h
 jmp $
 StartBootMessage: db "Start Boot Message"
